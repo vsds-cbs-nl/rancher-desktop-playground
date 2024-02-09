@@ -9,3 +9,5 @@ Install nginx as ingress with the lines below:
 cd ingress-nginx
 helm install ingress-nginx ./4.7.5 --values=overlays/localdev/values.yaml --namespace ingress-nginx --create-namespace
 ```
+
+[back to index](../)

@@ -43,10 +43,10 @@ After installing rancher desktop a reboot is needed.
 
 ## Final steps
 
-Clone this repository:
+Fork this repository and clone it:
 
 ```bash
-git clone https://github.com/erictummers/rancher-desktop-playground.git
+git clone https://github.com/<YOUR_NAME_HERE>/rancher-desktop-playground.git
 ```
 
 Start Rancher desktop with the shortcut on the desktop. Accept the defaults for kubernetes and runtime. Now install [ingress-nginx](ingress-nginx) and [argocd](argocd) and you're ready for playing.
