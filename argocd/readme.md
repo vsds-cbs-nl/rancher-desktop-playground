@@ -36,7 +36,8 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
     - use git for the username
     - use the access token for the password
 1. edit the localdev.yaml git urls - look for <YOUR_NAME_HERE>
-1. edit the bootstrap/localdev/*.yaml git urls
+1. edit the bootstrap/localdev/*.yaml git urls - look for <YOUR_NAME_HERE>
+1. commit and push these changes
 1. add localdev.yaml as app-of-apps to argocd
     - new app
     - application name: localdev
