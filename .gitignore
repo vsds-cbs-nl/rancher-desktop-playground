@@ -1,0 +1,7 @@
+# private key of certificate
+**/server.key
+**/server.crt
+
+# mac stuff
+.DS_Store
+**/.DS_Store
