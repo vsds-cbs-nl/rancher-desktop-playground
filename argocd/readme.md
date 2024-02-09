@@ -49,4 +49,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
     - namespace: argocd
 1. click sync on the app to initialize the sync - else the state remains _Missing_
 
+You'll end up with this
+![argocd with 5 apps](../assets/argocd01.png)
+
 [back to index](../)
