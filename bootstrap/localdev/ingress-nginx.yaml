@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: 'https://github.com/erictummers/rancher-desktop-playground'
     path: ingress-nginx/4.7.5
-    targetRevision: HEAD
+    targetRevision: erictummers
     helm:
       valueFiles:
         - ../overlays/localdev/values.yaml

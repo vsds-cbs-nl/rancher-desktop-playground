@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: 'https://github.com/erictummers/rancher-desktop-playground'
     path: apps/localdev
-    targetRevision: HEAD
+    targetRevision: erictummers
   destination:
     server: 'https://kubernetes.default.svc'
   syncPolicy:
@@ -31,7 +31,7 @@ spec:
   source:
     repoURL: 'https://github.com/erictummers/rancher-desktop-playground'
     path: bootstrap/localdev
-    targetRevision: HEAD
+    targetRevision: erictummers
   destination:
     server: 'https://kubernetes.default.svc'
   syncPolicy:
