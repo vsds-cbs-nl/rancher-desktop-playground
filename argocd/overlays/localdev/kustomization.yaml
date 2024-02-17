@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-- ../../2.9.6/install.yaml
+- ../../2.9.6
 - ingress-http.yaml
 - ingress-grpc.yaml
 
