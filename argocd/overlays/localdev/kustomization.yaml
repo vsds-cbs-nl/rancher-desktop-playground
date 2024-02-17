@@ -34,8 +34,3 @@ configMapGenerator:
   literals:
   - exec.enabled="true"
   name: argocd-cm
-
-images:
-- name: quay.io/argoproj/argocd
-  newTag: v2.9.3
-
