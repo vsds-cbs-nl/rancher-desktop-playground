@@ -22,7 +22,7 @@ Create a new Virtual Machine in azure. Pay attention to these settings:
 
 ## Install
 
-After the VM is created make a remote desktop connection and run these installations with powershell.
+After the VM is created make a remote desktop connection and run these installations with powershell (as administrator).
 
 ```powershell
 # install chocolatey

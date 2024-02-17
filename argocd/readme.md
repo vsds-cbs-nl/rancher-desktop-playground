@@ -1,8 +1,10 @@
 # argocd
 
+Installation files are from <https://github.com/argoproj/argo-cd/releases>
+
 ## Install
 
-First create a certificate to use for https connections. This is needed to get the GUI available with nginx ingress. Create the tls secret with the lines below in the argocd namespace.
+First create a certificate to use for https connections. This is needed to get the GUI available with nginx ingress. Create the tls secret with the lines below in the argocd namespace. The first line creates a new certificate, the second line creates a namespace in your cluster and the last line creates a secret with the generated certificate (server.key and server.crt)
 
 ```bash
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt -subj "/CN=*.localdev.me"
@@ -51,5 +53,24 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 You'll end up with this
 ![argocd with 5 apps](../assets/argocd01.jpg)
+
+## Upgrade
+
+After installation you can upgrade argocd with argocd. Just edit the overlays/localdev/kustomization.yaml to use the new argocd installation files. Here is an example how to upgrade from 2.9.3 to 2.9.6:
+
+### kustomization.yaml
+```yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: argocd
+
+resources:
+- ../../2.9.6 # <- changed this to the new version
+- ingress-http.yaml
+- ingress-grpc.yaml
+
+patches:
+# ... more ...
+```
 
 [back to index](../)
