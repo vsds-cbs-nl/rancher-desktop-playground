@@ -21,7 +21,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ## Setup
 
 1. create access token in github (see https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-1. browse to https://argocd.localdev.me - you'll get an error on the selfsigned certificate
+1. browse to https://argocd.localdev.me
 1. click Advanced and the link Continue to argo.localdev.me
 1. login with username _admin_ and the initial admin password (see Install section)
 1. go to settings > repositories > connect repo
@@ -38,7 +38,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
     - project name: default
     - repository url: the repository you connected before
     - revision: HEAD
-    - path: . (dot for current folder)
+    - path: environments/localdev
     - cluster url: https://kubernetes.default.svc
     - namespace: argocd
 1. click sync on the app to initialize the sync - else the state remains _Missing_
