@@ -51,6 +51,7 @@ You'll end up with this
 After installation you can upgrade argocd with argocd. Just edit the overlays/localdev/kustomization.yaml to use the new argocd installation files. Here is an example how to upgrade from 2.9.3 to 2.9.6:
 
 ### kustomization.yaml
+
 ```yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
