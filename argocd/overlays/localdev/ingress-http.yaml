@@ -18,7 +18,3 @@ spec:
             port:
               name: http
     host: argocd.localdev.me
-  tls:
-  - hosts:
-    - argocd.localdev.me
-    secretName: ingress-tls
