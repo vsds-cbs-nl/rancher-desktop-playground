@@ -152,9 +152,9 @@ controller:
   maxmindLicenseKey: ""
   # -- Additional command line arguments to pass to Ingress-Nginx Controller
   # E.g. to specify the default SSL certificate you can use
-  extraArgs: {}
-  ## extraArgs:
-  ##   default-ssl-certificate: "<namespace>/<secret_name>"
+  ##extraArgs: {}
+  extraArgs:
+    default-ssl-certificate: "default/ingress-tls"
 
   # -- Additional environment variables to set
   extraEnvs: []

@@ -4,15 +4,7 @@ Installation files are from <https://github.com/argoproj/argo-cd/releases>
 
 ## Install
 
-First create a certificate to use for https connections. This is needed to get the GUI available with nginx ingress. Create the tls secret with the lines below in the argocd namespace. The first line creates a new certificate, the second line creates a namespace in your cluster and the last line creates a secret with the generated certificate (server.key and server.crt)
-
-```bash
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout server.key -out server.crt -subj "/CN=*.localdev.me"
-kubectl create namespace argocd
-kubectl create secret tls ingress-tls --key server.key --cert server.crt -n argocd
-```
-
-Now install argocd with these lines:
+Install argocd with these lines:
 
 ```bash
 # navigate to the argocd/overlays/localdev folder

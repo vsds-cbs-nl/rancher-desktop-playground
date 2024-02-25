@@ -17,7 +17,3 @@ spec:
             port:
               name: https
     host: grpc.argocd.localdev.me
-  tls:
-  - hosts:
-    - grpc.argocd.localdev.me
-    secretName: ingress-tls
