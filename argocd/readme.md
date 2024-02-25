@@ -29,7 +29,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
     - use https://github.com/<YOUR_NAME_HERE>/rancher-desktop-playground.git for repository url and replace <YOUR_NAME_HERE> with your github account
     - use git for the username
     - use the access token for the password
-1. edit the localdev.yaml git urls - look for <YOUR_NAME_HERE>
+1. edit the environments/localdev/app-of-apps.yaml git urls - look for <YOUR_NAME_HERE>
 1. edit the bootstrap/localdev/*.yaml git urls - look for <YOUR_NAME_HERE>
 1. commit and push these changes
 1. add localdev.yaml as app-of-apps to argocd
