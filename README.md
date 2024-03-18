@@ -6,6 +6,7 @@ Installation and sample use of rancher desktop
 
 * Azure subscription - most likely part of your Visual Studio subscription
 * Github account - free to signup if you don't have one
+* Microsoft Remote Desktop - [links to downloads](https://learn.microsoft.com/nl-nl/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)
 * some time to tinker
 
 ## Setup
@@ -35,6 +36,10 @@ choco install git -y
 choco install base64 -y
 # install rancher desktop
 choco install rancher-desktop -y
+# install visual studio code
+choco install vscode -y
+choco install vscode-yaml -y
+
 ```
 
 ## Reboot

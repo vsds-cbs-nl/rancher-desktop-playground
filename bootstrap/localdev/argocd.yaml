@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/erictummers/rancher-desktop-playground'
+    repoURL: 'https://github.com/<YOUR_NAME_HERE>/rancher-desktop-playground'
     path: argocd/overlays/localdev
-    targetRevision: erictummers
+    targetRevision: HEAD
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: argocd
