@@ -9,7 +9,7 @@ spec:
   # erictummers project to be able to filter
   project: erictummers
   source:
-    repoURL: 'https://github.com/erictummers/rancher-desktop-playgrounds'
+    repoURL: 'https://github.com/erictummers/rancher-desktop-playground'
     path: website/overlays/localdev
     targetRevision: erictummers
   destination:
