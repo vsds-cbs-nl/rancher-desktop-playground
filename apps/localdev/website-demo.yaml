@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: website
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # erictummers project to be able to filter
+  project: erictummers
+  source:
+    repoURL: 'https://github.com/erictummers/rancher-desktop-playgrounds'
+    path: website/overlays/localdev
+    targetRevision: erictummers
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
