@@ -9,6 +9,7 @@ Install argocd with these lines:
 ```bash
 # navigate to the argocd/overlays/localdev folder
 cd argocd/overlays/localdev
+kubectl create ns argocd
 kubectl apply -k .
 ```
 
